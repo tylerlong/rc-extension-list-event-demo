@@ -23,7 +23,7 @@ const main = async () => {
     }
   );
   for (let i = 0; i < 3; i++) {
-    await waitFor({interval: 5000});
+    await waitFor({interval: 10000});
     await rc
       .restapi()
       .account()
@@ -33,7 +33,7 @@ const main = async () => {
           firstName: `Test ${i}`,
         },
       });
-    await waitFor({interval: 5000});
+    await waitFor({interval: 10000});
   }
   await rc.revoke();
 };
